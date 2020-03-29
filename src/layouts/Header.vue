@@ -1,0 +1,54 @@
+<template>
+	<div class="nav">
+		<ul>
+			<router-link
+			to="/home"
+			exact-active-class="active"
+			tag="li"
+			>
+			<a href="javascript:;" >首页</a>
+			</router-link>
+			
+			<router-link
+			to="/follow"
+			exact-active-class="active"
+			tag="li"
+			>
+			<a href="javascript" >关注</a>
+			</router-link>
+			
+			<router-link
+			to="/column"
+			exact-active-class="active"
+			tag="li"
+			>
+			<a href="javascript" >栏目</a>
+			</router-link>
+		</ul>
+	</div>
+</template>
+
+<script>
+ export default {
+	name:'Header',
+	props:{},
+	data(){
+	  return {
+		
+	  }
+	},
+	components:{},
+	mounted(){},
+	updated(){},
+	methods:{}
+  }
+</script>
+
+<style scoped>
+  .nav{width:100%; position:fixed; top:0;left:0; z-index:2; background:#fff;background-image: none;}
+  .nav ul{width:90%;height:0.6rem; margin:0 auto;}
+  .nav ul li{width:30%;height:0.6rem; float:left;background-image: none;margin:0;}
+  .nav ul li:nth-child(1){margin-left: 0.3rem;}
+  .nav ul li a{ display:block;width:1.46rem;height:0.6rem; line-height:0.6rem; text-align:center; font-size:0.3rem; color:#9e9a95;}
+  .nav ul li.active a{height:0.5rem; border-bottom:0.1rem solid #5477b2; color:#5477b2;}
+</style>
